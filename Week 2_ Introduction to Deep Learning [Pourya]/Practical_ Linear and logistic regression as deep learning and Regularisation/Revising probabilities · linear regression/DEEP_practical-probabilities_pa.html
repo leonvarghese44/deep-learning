@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Problems on Probability and Random Variables</title>
+  <meta name="description" content="Problem sheet covering probability and random variables." />
+  <style>
+    :root{
+      --maxw: 900px;
+      --fg: #111;
+      --muted:#555;
+      --bg:#fff;
+      --link:#0645ad;
+      --border:#ddd;
+      --codebg:#f6f8fa;
+    }
+    html,body{background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height:1.55;}
+    body{margin:0;}
+    main{max-width:var(--maxw); margin:0 auto; padding:2rem 1.25rem;}
+    header{border-bottom:1px solid var(--border); padding-bottom:1rem; margin-bottom:1.5rem;}
+    h1{font-size:1.9rem; margin:0 0 .25rem 0;}
+    .subtitle{color:var(--muted); margin:0;}
+    h2{margin-top:2rem; font-size:1.35rem;}
+    ol{padding-left:1.4rem;}
+    li{margin:.7rem 0;}
+    .star{font-weight:700;}
+    .note{background:var(--codebg); border:1px solid var(--border); border-radius:.5rem; padding:.75rem 1rem; margin:1rem 0;}
+    a{color:var(--link);}
+    footer{margin-top:2.5rem; padding-top:1rem; border-top:1px solid var(--border); color:var(--muted); font-size:.95rem;}
+    code{background:var(--codebg); padding:.1rem .25rem; border-radius:.25rem;}
+  </style>
+
+  <!-- MathJax for math rendering -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']]
+      },
+      options: { renderActions: { addMenu: [] } }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Problems on Probability and Random Variables</h1>
+      <p class="subtitle">Practice questions on basic probability and random variables.</p>
+    </header>
+
+    <section aria-labelledby="probability">
+      <h2 id="probability">1&nbsp;&nbsp;Probability</h2>
+      <ol>
+        <li>
+          <span class="star" aria-label="starred question">(*)</span>
+          A box contains three marbles: one red, one green, and one blue. Consider an experiment
+          that consists of taking one marble from the box, then replacing it in the box and drawing
+          a second marble from the box. What is the sample space?
+          If, at all times, each marble in the box is equally likely to be selected, what is the
+          probability of each point in the sample space?
+        </li>
+        <li>
+          <span class="star" aria-label="starred question">(*)</span>
+          Repeat Question 1 when the second marble is drawn without replacing the first marble.
+        </li>
+        <li>
+          <span class="star" aria-label="starred question">(*)</span>
+          An individual uses the following gambling system at Las Vegas. She bets one dollar that the roulette
+          wheel come up red. If she wins, she quits. If she loses then she makes the same bet a second
+          time, only this time she bets two dollars; then regardless of the outcome, she quits. 
+          Assuming (unrealistically!) that she has a probability of
+          $\tfrac{1}{2}$ of winning each bet, what is the probability that she ends up as a winner?
+          Why is this system not used by everyone?
+        </li>
+        <li>
+          <span class="star" aria-label="starred question">(*)</span>
+          If $P(E)=0.9$ and $P(F)=0.8$, show that $P(E\cap F)\ge 0.7$. In general, show that:
+          $$P(E\cap F)\ge P(E)+P(F)-1.$$
+          This is known as <em>Bonferroni’s inequality</em>.
+        </li>
+        <li>
+          Bayes’ theorem states that:
+          $$P(E\mid F)=\frac{P(E)\,P(F\mid E)}{P(F)}$$
+          whenever $P(F)&gt;0$. Prove that Bayes’ theorem is correct.
+        </li>
+        <li>
+          <span class="star" aria-label="starred question">(*)</span>
+          Suppose that 5 percent of men and 0.25 percent of women are colour-blind.
+          A colour-blind person is chosen at random. What is the probability of this person being male?
+          Assume that there are an equal number of males and females.
+        </li>
+        <li>
+          <span class="star" aria-label="starred question">(*)</span>
+          A die is rolled twice. What is the conditional probability that the first die is six
+          given that the sum of the dice is seven?
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="rv">
+      <h2 id="rv">2&nbsp;&nbsp;Random variables</h2>
+      <ol>
+        <li>
+          Let $X$ be a discrete random variable with the following distribution:
+          $$P(X=1)=0.2,\quad P(X=2)=0.4,\quad P(X=5)=0.4.$$
+          Compute the mean and variance of $X$.
+        </li>
+        <li>
+          Recall that $E[X]$ denotes the mean (expected value) of $X$.
+          Show that $E(aX+b)=aE(X)+b$ for any scalars $a$ and $b$, for both discrete and continuous
+          random variables.
+        </li>
+        <li>
+          Show that, for any two random variables $X$ and $Y$, we have $E(X+Y)=E(X)+E(Y)$.
+        </li>
+        <li>
+          Find two random variables $X$ and $Y$ such that $E(XY)\ne E(X)E(Y)$.
+        </li>
+        <li>
+          Show that, for any random variable $X$ and any scalar $a$, we have $\mathrm{Var}(aX)=a^2\mathrm{Var}(X)$.
+        </li>
+        <li>
+          Show that $\mathrm{cov}(X,Y)=E(XY)-E(X)E(Y)$.
+        </li>
+        <li>
+          Show that if $X$ and $Y$ are independent then $E(XY)=E(X)E(Y)$.
+        </li>
+        <li>
+          Show that if $X$ and $Y$ are independent then $\mathrm{cov}(X,Y)=0$.
+        </li>
+      </ol>
+    </section>
+
+    <div class="note" role="note" aria-label="Accessibility note">
+      <strong>Accessibility note:</strong>
+      This handout uses MathJax to render mathematics. If you need a non-JavaScript version, ask the module team for a PDF or LaTeX source.
+    </div>
+
+    <footer>
+      <p>File: <code>DEEP_practical2a-probabilities.html</code></p>
+    </footer>
+  </main>
+</body>
+</html>
